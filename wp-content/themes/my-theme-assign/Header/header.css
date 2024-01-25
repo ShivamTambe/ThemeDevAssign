@@ -1,0 +1,9 @@
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10vw;
+}
+.main-navigation{
+    width: auto !important;
+}
