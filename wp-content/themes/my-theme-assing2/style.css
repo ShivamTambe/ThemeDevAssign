@@ -92,3 +92,20 @@
     display: flex;
     justify-content: space-between;
 }
+.comment-form p{
+    display: flex;
+    flex-direction: column;
+}
+.comment-form-cookies-consent{
+    display: flex;
+    flex-direction: row !important;
+}
+.submit{
+    width: 200px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+.wp-pagenavi {
+    padding-left: 20vw;
+}

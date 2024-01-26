@@ -39,7 +39,7 @@
                     <?php } ?>
             </div>
         </div>
-        <div class="blogright"></div>
+        <?php get_sidebar()?>
     </div>
 
        <?php echo wp_pagenavi(); ?>

@@ -20,7 +20,7 @@
                             <span>on</span>
                             <span class="date"><?php echo get_the_date()?></span>
                         </span>
-                        <span>12 Comments</span>
+                        <span><?php echo get_comments_number()?> Comments</span>
                     </div>
                     <div class="line"></div>
                     <img src="<?php echo $image_path[0]?>" width="500px" alt="">
@@ -28,8 +28,15 @@
             <div class="postcontent">
                 <?php the_content()?>
             </div>
+            <div class="commentform">
+                <?php comment_form(); ?>
+            </div>
+
+            <div class="commentlist">
+                <?php wp_list_comments(); ?>
+            </div>
+
         </div>
-        <div class="blogright"></div>
     </div>
 <?php 
     get_footer();
