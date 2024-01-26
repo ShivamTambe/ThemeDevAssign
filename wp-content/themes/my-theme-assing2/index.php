@@ -31,7 +31,9 @@
                                 </div>
                                 <div class="line"></div>
                                 <div class="txtdis"><?php the_excerpt()?></div>
-                                <div class="txtend">Red Color of Me</div>
+                                <a href="<?php the_permalink()?>">
+                                    <div class="txtend">Read More</div>
+                                </a>
                             </div>
                         </div>
                     <?php } ?>
