@@ -102,12 +102,10 @@ function my_theme_assign_setup() {
 }
 add_action( 'after_setup_theme', 'my_theme_assign_setup' );
 // functions.php
-// functions.php
-function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'my-theme-styles', get_template_directory_uri() . '/themes/my-theme-assign/Header/header.css', array(), '1.0', 'all' );
+function my_theme_assign_enqueue_styles() {
+    wp_enqueue_style( 'header', get_template_directory_uri() . '/ThemeDevAssign/wp-content/themes/my-theme-assign/styles/header.css', array(), '1.0', 'all' );
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-
+add_action( 'wp_enqueue_scripts', 'my_theme_assign_enqueue_styles' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

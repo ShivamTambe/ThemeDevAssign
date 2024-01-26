@@ -13,6 +13,7 @@
  */
 
 get_header();
+get_template_part( 'template-parts/slidertop', 'none' );
 ?>
 
 	<main id="primary" class="site-main">

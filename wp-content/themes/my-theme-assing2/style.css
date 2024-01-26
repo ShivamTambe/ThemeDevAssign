@@ -1,0 +1,27 @@
+/*
+    Theme Name:MyThemeAssign
+    Description:Theme for learnig and performing assignment
+    Authour:Shivam Tambe
+*/
+
+.nav{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav li{
+    border: 1px solid transparent;
+    transition: border 0.2s ease-in-out;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+.nav li a{
+    text-decoration: none;
+    color: black;
+}
+.nav li:hover{
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: red;
+    color: white;
+}

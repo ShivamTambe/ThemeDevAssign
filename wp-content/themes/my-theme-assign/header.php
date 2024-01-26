@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="wp-content/themes/my-theme-assign/Header/header.css">
+	<link rel="stylesheet" href="wp-content/themes/my-theme-assign/SliderTop/slidertop.css">
 	<?php wp_head(); ?>
 </head>
 
