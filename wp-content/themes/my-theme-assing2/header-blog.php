@@ -33,3 +33,26 @@
             ))
         ?>
     </div>
+    <div class="slider-btm">
+        <div class="slidercontent">
+            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
+            <div class="sliderbtmcontent">
+                <div class="sliderbctitle">Multimedia</div>
+                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
+            </div>
+        </div>
+        <div class="slidercontent">
+            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
+            <div class="sliderbtmcontent">
+                <div class="sliderbctitle">Multimedia</div>
+                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
+            </div>
+        </div>
+        <div class="slidercontent">
+            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
+            <div class="sliderbtmcontent">
+                <div class="sliderbctitle">Multimedia</div>
+                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
+            </div>
+        </div>
+    </div>

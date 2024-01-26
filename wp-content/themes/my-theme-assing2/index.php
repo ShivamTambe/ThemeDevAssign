@@ -4,61 +4,42 @@
 ?>
 
 <?php 
-    get_header();
+    get_header('blog');
 ?>
 
-    <div class="slider-top">
-        <div class="arrow"><img src="<?php bloginfo('template_directory')?>/StaticAssets/home/arrow.png" alt=""></div>
-        <div class="slider-image">
-            <div class="slidertitle">Gearing up the ideas</div>
-            <div class="sliderpara">
-                Lorem ipsum dolor sit, amet cLorem ipsum dolor sit, amet cLorem ipsum dolor sit, amet cLorem ipsum dolor sit, amet c
+
+    <div class="blog">
+        <div class="blogleft">
+            <div class="blogtitle">Let's Blog</div>
+            <div class="line"></div>
+            <div class="posts">
+                <?php 
+                    while(have_posts()){
+                        the_post(); 
+                            $image_path = wp_get_attachment_image_src(get_post_thumbnail_id(),'medium');
+                        ?>
+                        <div class="post">
+                            <div class="ptl">22</div>
+                            <div class="ptt"><?php the_title()?></div>
+                        </div>
+                        <div class="postbtm">
+                            <img src="<?php echo $image_path[0]?>" alt="" srcset="">
+                            <div class="posttxt">
+                                <div class="txttop">
+                                    <div class="txtl">By the harry Potter <?php echo get_the_date() ?></div>
+                                    <div class="txtr">jdjjdj</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="txtdis"><?php the_excerpt()?></div>
+                                <div class="txtend">Red Color of Me</div>
+                            </div>
+                        </div>
+                    <?php } ?>
             </div>
         </div>
-        <div class="arrow2"><img src="<?php bloginfo('template_directory')?>/StaticAssets/home/arrow.png" alt=""></div>
-    </div>
-    <div class="slider-btm">
-        <div class="slidercontent">
-            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
-            <div class="sliderbtmcontent">
-                <div class="sliderbctitle">Multimedia</div>
-                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
-            </div>
-        </div>
-        <div class="slidercontent">
-            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
-            <div class="sliderbtmcontent">
-                <div class="sliderbctitle">Multimedia</div>
-                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
-            </div>
-        </div>
-        <div class="slidercontent">
-            <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/feature.png" alt="btmimg">
-            <div class="sliderbtmcontent">
-                <div class="sliderbctitle">Multimedia</div>
-                <div class="sliderbcpara">This Adding addional imnofrmation to incareate iszeis the discription part of Slider btm</div>
-            </div>
-        </div>
-    </div>
-    <div class="main">
-        <div class="maint">
-            <div class="mtitle">Design the soul</div>
-            <div class="mbtn">Plus</div>
-        </div>
-        <div class="line"></div>
-        <div class="mimgs">
-            <div class="mimgline">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-            </div>
-            <div class="mimgline">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-                <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/image-1.png" alt="">
-            </div>
-        </div>
-        <div class="line"></div>
+        <div class="blogright"></div>
     </div>
 
-    <?php get_footer() ?>
+       <?php echo wp_pagenavi(); ?>
+    
+ <?php get_footer() ?>

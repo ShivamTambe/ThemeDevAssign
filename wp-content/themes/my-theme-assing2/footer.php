@@ -19,3 +19,5 @@
     </div>
 </body>
 </html>
+<!-- javascript for plugins -->
+<?php wp_footer();?> 

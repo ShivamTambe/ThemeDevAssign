@@ -25,3 +25,67 @@
     background-color: red;
     color: white;
 }
+.current-menu-item a{
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+}
+
+
+
+/* Css FOr BLOG */
+
+.blog{
+    display: flex;
+    gap: 20px;
+    margin: 20px 20vw;
+}
+.blogright{
+    width: 500px;
+}
+.blogleft{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.blogtitle{
+    font-size: 30px;
+}
+.posts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.post{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.posttop{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    border: 1px solid black;
+    align-items: center;
+}
+.ptl{
+    border: 1px solid red;
+    padding: 2px;
+}
+.postbtm{
+    display: flex;
+    gap: 10px;
+}
+.posttxt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.txttop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.txtend,.txtr{
+    color: red;
+}
