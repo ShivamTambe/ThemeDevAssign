@@ -9,7 +9,12 @@
 </head>
 <body>
     <div class="header">
-        <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/logo.png" alt="logo">
+        <!-- <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/logo.png" alt="logo"> -->
+        <?php 
+            $logo = get_header_image();
+        ?>
+
+        <img src="<?php echo $logo ?>" alt="logo">
         <!-- <div class="navbar">
             <div class="navbtn">Home</div>
             <div class="navbtn">About</div>
