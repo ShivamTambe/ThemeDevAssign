@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/style.css">
-    <title>ThemeDevAssign</title>
+    <title>
+        <?php if(is_front_page()){ bloginfo('name');} else {wp_title();}?>  <?php  if(is_front_page()) { bloginfo('description'); }?>
+    </title>
     <?php  wp_head()?> <!--  function to call style for plugins -->
 </head>
 <body>
