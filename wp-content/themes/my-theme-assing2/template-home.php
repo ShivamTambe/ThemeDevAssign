@@ -5,7 +5,6 @@
     // echo get_template_directory_uri();
     // bloginfo('template_directory');
 ?>
-
 <?php 
     get_header();
 ?>

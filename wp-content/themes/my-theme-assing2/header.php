@@ -10,6 +10,54 @@
     </title>
     <?php  wp_head()?> <!--  function to call style for plugins -->
 </head>
+<style>
+    .portfolio{
+        width: 920px;
+        display: flex;
+        margin: 20px auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .porttop{
+        display: flex;
+        justify-content: space-between;
+    }
+    .portbtns{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .portbtn{
+        border: 1px solid black;
+        background-color: red;
+        color: white;
+        padding: 5px 2px;
+        border-radius: 2px;
+    }
+    .portbtn a{
+        color: white;
+        text-decoration: none;
+    }
+    .portimgs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .portbtn:nth-child(3n+1) {
+        clear: left;
+    }
+    .pagena{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wp-pagenavi {
+        padding-left: 0vw !important;
+    }
+    .activebtn{
+        background-color: green;
+    }
+</style>
 <body>
     <div class="header">
         <!-- <img src="<?php bloginfo('template_directory')?>/StaticAssets/home/logo.png" alt="logo"> -->

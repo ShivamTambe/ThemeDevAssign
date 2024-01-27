@@ -1,4 +1,9 @@
 <?php
+
+
+    require_once __DIR__ . '/post-types/portfolio.php';
+    require_once __DIR__ . '/taxonomy/portfolio_taxonomy_category.php';
+    
     register_nav_menus(
         array('primary-menu'=> 'Header Menu')
     );
@@ -11,4 +16,5 @@
             'id'=>'sidebar'
             )
     );
+    add_post_type_support('page','excerpt');
 ?>

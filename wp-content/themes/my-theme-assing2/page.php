@@ -4,6 +4,7 @@
         <?php the_post_thumbnail('large')?>
     </div>
     <div class="the_content">
-        <?php  the_content()?>
+        <?php the_excerpt();?>
+        <?php  the_content();?>
     </div>
 <?php get_footer() ?>

@@ -6,8 +6,6 @@
 <?php 
     get_header('blog');
 ?>
-
-
     <div class="blog">
         <div class="blogleft">
             <div class="blogtitle">Let's Blog</div>
