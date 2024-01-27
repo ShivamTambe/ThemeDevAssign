@@ -67,6 +67,18 @@
         display: none;
         border: 1px solid green;
     }
+
+
+        /* SiderBar right css */
+
+    .sideimg{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three items per row */
+        gap: 5px; /* Adjust the gap between items as needed */
+    }
+    .popularposts{
+        margin-top: 20px;
+    }
 </style>
 <body>
     <div class="header">
