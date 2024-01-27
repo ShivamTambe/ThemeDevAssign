@@ -17,4 +17,9 @@
             )
     );
     add_post_type_support('page','excerpt');
+
+    function enqueue_jquery() {
+        wp_enqueue_script('jquery');
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_jquery');
 ?>

@@ -57,6 +57,16 @@
     .activebtn{
         background-color: green;
     }
+    .portfoliocontent{
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        border: 1px solid green;
+    }
 </style>
 <body>
     <div class="header">

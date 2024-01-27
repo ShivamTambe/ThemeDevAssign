@@ -5,7 +5,9 @@
 <?php 
     get_header();
 ?>
+<div class="portfoliocontent" id="background-container">
 
+</div>
 <?php
 // Query all categories for the 'portfolio_category' taxonomy
     $portfolio_categories = get_terms(array(
@@ -69,10 +71,11 @@
              $tmp=0;
             if ($current_category_slug!='' && $portfolio_query->have_posts()) {
                 while ($portfolio_query->have_posts()) {
-                    $portfolio_query->the_post();
-                    // Your loop content for portfolio items
-                    the_content();
-                }
+                    $portfolio_query->the_post(); ?>
+                    <div class="post-content" data-post-id="<?php the_ID(); ?>"   data-image-path="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>">
+                        <?php the_content(); ?>
+                    </div>
+               <?php }
                 $tmp=1;
                 
             } else {
@@ -107,3 +110,25 @@
 <?php 
     get_footer();
 ?>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all elements with class 'post-content'
+        var postContents = document.querySelectorAll('.post-content');
+
+        // Attach click event listener to each post content
+        postContents.forEach(function(postContent) {
+            postContent.addEventListener('click', function() {
+                // Retrieve the background image URL from the data attribute
+                var backgroundImage = postContent.getAttribute('data-image-path');
+                
+                // Log or use the postId as needed
+                console.log('Clicked Post ID:', backgroundImage);
+                // Update the background image of a specific div (e.g., with ID 'background-container')
+                document.getElementById('background-container').style.backgroundImage = `url(${backgroundImage})`;
+                document.getElementById('background-container').style.display = 'block';
+            });
+        });
+    });
+
+
+</script>
