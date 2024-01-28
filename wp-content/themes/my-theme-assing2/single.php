@@ -37,6 +37,7 @@
             </div>
 
         </div>
+        <?php get_sidebar('post'); ?>
     </div>
 <?php 
     get_footer();

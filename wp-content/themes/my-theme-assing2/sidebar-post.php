@@ -12,15 +12,6 @@
     );
 
     $blog_query = new WP_Query($blog_data);
-
-    $recent_posts = array(
-        'post_type'      => 'post',
-        'posts_per_page' => 6,
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-    );
-
-    $recent_posts_query = new WP_Query($recent_posts);
 ?>
 <div class="blogright">
     <div>
@@ -38,12 +29,12 @@
         </div>
     </div>
     <div class="popularposts">
-        <h1>Recent Posts</h1>
+        <h1>Portfolio</h1>
         <div class="line"></div>
         <div class="popuposts">
         <?php 
-                while ($recent_posts_query->have_posts()){ ?>
-                    <?php    $recent_posts_query->the_post(); ?>
+                while ($blog_query->have_posts()){ ?>
+                    <?php    $blog_query->the_post(); ?>
                     <div class="popupost">
                         <div class="posticon">
                                 <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>" alt="">

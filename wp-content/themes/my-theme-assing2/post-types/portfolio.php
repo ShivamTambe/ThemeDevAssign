@@ -32,6 +32,8 @@
             'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
             'taxonomies'         => array(),
             'show_in_rest'       => true, // Enables block editor (Gutenberg)
+
+            'show_in_rest'        => true, // Enable REST API
         );
     
         register_post_type('portfolio', $args);
